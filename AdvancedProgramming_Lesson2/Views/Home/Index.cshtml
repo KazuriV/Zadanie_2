@@ -1,0 +1,33 @@
+﻿
+@using Microsoft.Extensions.Localization
+@using Microsoft.AspNetCore.Mvc.Localization
+
+
+@inject IStringLocalizer<IndexModel> Localizer
+@inject IHtmlLocalizer<IndexModel> HtmlLocalizer
+@* ViewLocalizer path is Resources.Pages.Index *@
+@inject IViewLocalizer ViewLocalizer
+
+
+@{ ViewData["Title"] = "Strona główna"; }
+
+
+
+<div class="text-center">
+    <h1 class="display-4">@Resources.Pages.IndexModel.Welcome</h1>
+    <p>@Resources.Pages.IndexModel.Learn_page</p>
+    <p>@Resources.Pages.IndexModel.Learn <a href="https://docs.microsoft.com/aspnet/core">@Resources.Pages.IndexModel.Learn2</a>.</p>
+    <img src="https://image.ceneostatic.pl/data/products/20077534/p-the-simpsons-homer-reprodukcja.jpg" alt="Brak obrazka" />
+</div>
+
+
+@{ ViewData["Title"] = @Localizer["Home page"]; }
+
+<div class="text-center">
+    <h1 class="display-4">@ViewLocalizer["Home page"]</h1>
+    <p>
+        @HtmlLocalizer["Learn"]
+    </p>
+</div>
+
+@{ ViewData["Title"] = "Strona główna"; }

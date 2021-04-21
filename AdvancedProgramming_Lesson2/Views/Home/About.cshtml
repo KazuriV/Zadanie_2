@@ -1,0 +1,16 @@
+﻿@using Microsoft.Extensions.Localization
+
+@inject IStringLocalizer<Program> Localizer
+@{
+    ViewData["Title"] = "About";
+}
+
+<h1>@Localizer["About"]</h1>
+
+<p>
+    @Localizer["Contents"]
+</p>
+
+<div class="text-center">
+    <img src="https://upload.wikimedia.org/wikipedia/en/0/02/Homer_Simpson_2006.png" alt="Brak obrazka" />
+</div>

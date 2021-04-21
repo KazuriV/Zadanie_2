@@ -1,0 +1,1 @@
+﻿alter table Movie ADD Rating varchar(10), Producent varchar(30)
